@@ -1,0 +1,261 @@
+
+body, html {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	font-size: 0.9rem;
+}
+
+body {
+	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #F9F9F9), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #F9F9F9),color-stop(.75, #F9F9F9), color-stop(.75, transparent),to(transparent));
+	-webkit-background-size: 7px 7px;
+}
+
+/* Canvas */
+#Canvas {
+	width:  0px;
+	height: 0px;
+	background-color: #ddd;
+	image-rendering: pixelated;
+	image-rendering : -moz-crisp-edges;    /* Firefox */
+}
+
+div.all{
+	background-color: #fff;
+	box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.2);
+	width: 1000px;
+	min-width: 1000px;
+	margin: 0 auto;
+}
+
+/* The main container that contains the right and left sides of the screen */
+div.main{
+	display: flex;
+	justify-content: center;
+}
+
+/* screen left and right */
+div.right, div.left {
+	box-sizing: border-box;
+	padding: 30px;
+}
+
+/* screen left */
+div.left{
+	position: sticky;
+	width: 231px;
+	height: 100%;
+	top: 0;
+	padding-right: 0;
+	line-height: 1.4rem;
+}
+
+/* screen right */
+div.right{
+}
+
+/* For scrolling content on the right side of the screen */
+div.right-scroll{
+}
+
+/* Container to which part/color picker is added */
+#ImageContainer {
+}
+
+/* Image for parts selection */
+img.parts{
+	image-rendering: pixelated;
+	image-rendering : -moz-crisp-edges;    /* Firefox */
+}
+
+/* parts container */
+div.parts-container{
+	position: relative;
+	border: solid 1px #999;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+/* Container for pallets by parts */
+div.palette-container{
+}
+
+/* Used color and palette container */
+.Result {
+	display: flex;
+	padding-top: 10px;
+}
+
+/* Container for current color display */
+#ResultPaletteContainer {
+	padding-left: 10px;
+	width : 146px;
+}
+
+/* Current color display */
+div.color-sample{
+	width:10;
+	height:10;
+	display: inline-block;
+}
+
+/* Number of currently used colors */
+.used-colors{
+}
+
+/* Current eyedropper color */
+#Spuit{
+	color : #fff;
+	font-size: 0.4rem;
+	text-align : center;
+	width : 44px;
+	height : 44px;
+	border-radius: 2px;
+	line-height : 44px
+}
+
+/* Frame related to pallet */
+.palette-container {
+	border-top: dotted 1px #999;
+	margin-top: 12px;
+	padding: 8px 6px 0;
+}
+
+/* Color picker call button */
+input.color-picker{
+	width:22px;
+	height:30px;
+	margin-right: 1px;
+	padding: 0;
+	border: solid 1px #bbb;
+	background-color: #fff;
+	vertical-align: middle;
+	border-radius: 2px;
+}
+
+input.color-picker:focus {
+	outline:0;
+}
+
+/* reset button */
+.default-button{
+	width:50px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+/* Buttons that match the color of the bangs */
+.synchronize-button{
+	width:148px;
+	margin-left: 10px;
+}
+
+/* apply button */
+.apply-template-button{
+	width:50px;
+}
+
+/* Save image/Save settings button */
+.default_button {
+	margin-bottom: 10px;
+}
+
+.apply-template-button, .default_button, .default-button, .synchronize-button{
+	height:30px;
+	vertical-align: middle;
+	border: solid 1px #999;
+	background-color: #f4f4f4;
+	border-radius: 5px;
+}
+
+/* Color template selection button */
+.apply-template-select{
+	margin-right: 2px;
+	margin-left: 10px;
+	height:30px;
+	vertical-align: middle;
+	border-radius: 5px;
+}
+
+/* part title */
+.parts-container-title{
+	position: absolute;
+	display: inline-block;
+	top: -7px;
+	left: 10px;
+	padding: 0 9px;
+	line-height: 1;
+	background: #FFF;
+	color: #666;
+}
+
+/* header */
+.header {
+	display: flex;
+	justify-content: center;
+	background: #f9f9f9;
+	border-bottom: dotted 1px #e0e0e0;
+}
+
+/* footer */
+.footer {
+	position: relative;
+	text-align:center;
+	background: #f9f9f9;
+	border-top: dotted 1px #e0e0e0;
+	padding: 70px 0;
+}
+
+#LoadingOverlay{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 2rem;
+	background: rgba(255, 255, 255, 1);
+	z-index: 99999;
+}
+
+hr {
+	border-top: 1px dotted #8c8b8b;
+	border-bottom: none;
+	margin: 20px 0;
+}
+
+/* 未使用。ファイルドロップ機能が実装されていた頃のもの 
+div.dropzone {
+	width: 500px;
+	height: 100px;
+	border: 1px #ababab dashed;
+	margin: 50px auto;
+}
+
+div.dropzone p {
+	text-align: center;
+	line-height: 100px;
+	margin: 0;
+	padding: 0;
+}
+
+色コピーボタン
+input.color-copy-button{
+	width:55px;
+	height:25px;
+	margin-top: 5px;
+	margin-right: 2px;
+}
+
+色ペーストボタン
+input.color-paste-button{
+	width:60px;
+	height:25px;
+	margin-top: 5px;
+	margin-right: 2px;
+}
+
+*/

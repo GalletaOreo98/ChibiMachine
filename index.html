@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <script type="text/javascript" src="./psd.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./dotKisekae.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="./kisekae.css">
+    </style>
+  </head>
+  <body onload="onLoad();" ondragover="onDragOverSetting(event);" ondrop="onDropSetting(event);">
+<!-- <div class="dropzone" ondrop="onDrop(event);" ondragover="onDragOver(event);"><p>drop psd file here.</p></div><br> -->
+    <div class="all">
+      <div class="header">
+      <div><img src="logo.png"></div>
+      </div>
+      <div class="main">
+        <div class="left">
+          <canvas id="Canvas">canvasタグをサポートしたブラウザが必要です。</canvas><br>
+          <div class="Result">
+            <div id="Spuit">スポイト</div>
+            <div id="ResultPaletteContainer"></div>
+          </div>
+          <hr>
+          <input type="button" class="default_button" value="画像を保存" onclick="saveCanvasAsPng(event);"> <input type="checkbox" id="check2x" class="default_checkbox">2倍拡大<br>
+          <input type="button" class="default_button" value="設定を保存" onclick="saveSetting(event);"><br>
+          保存した設定ファイルをこのウィンドウにドラッグ＆ドロップすると、設定を反映します。
+          <hr>
+        </div>
+        <div class="right">
+          <div class="right-scroll">
+            <div id="ImageContainer"></div><br>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div>&copy; 2020 SKY SCRAPER PROJECT</div>
+      </div>
+    </div>
+    <div id="LoadingOverlay">
+      Now Loading....
+    </div>
+  </body>
+</html>
